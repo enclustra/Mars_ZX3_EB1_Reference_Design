@@ -1,5 +1,5 @@
 # ----------------------------------------------------------------------------------
-# Copyright (c) 2021 by Enclustra GmbH, Switzerland.
+# Copyright (c) 2022 by Enclustra GmbH, Switzerland.
 #
 # Permission is hereby granted, free of charge, to any person obtaining a copy of
 # this hardware, software, firmware, and associated documentation files (the
@@ -28,7 +28,7 @@ set_property BITSTREAM.CONFIG.OVERTEMPPOWERDOWN ENABLE [current_design]
 set_property BITSTREAM.CONFIG.UNUSEDPIN PULLNONE [current_design]
 # ----------------------------------------------------------------------------------
 
-# Anios_0
+# Anios IO Connector 0
 set_property -dict {PACKAGE_PIN N22   IOSTANDARD LVCMOS25  } [get_ports {IOA_D0_P}]
 set_property -dict {PACKAGE_PIN P22   IOSTANDARD LVCMOS25  } [get_ports {IOA_D1_N}]
 set_property -dict {PACKAGE_PIN M15   IOSTANDARD LVCMOS25  } [get_ports {IOA_D2_P}]
@@ -56,7 +56,7 @@ set_property -dict {PACKAGE_PIN P15   IOSTANDARD LVCMOS25  } [get_ports {IOA_D23
 set_property -dict {PACKAGE_PIN M20   IOSTANDARD LVCMOS25  } [get_ports {IOA_CLK_N}]
 set_property -dict {PACKAGE_PIN M19   IOSTANDARD LVCMOS25  } [get_ports {IOA_CLK_P}]
 
-# CAM_0
+# Mini Camera Link Interface 0
 set_property -dict {PACKAGE_PIN F17   IOSTANDARD LVCMOS25  } [get_ports {CAM0_X0_N}]
 set_property -dict {PACKAGE_PIN G17   IOSTANDARD LVCMOS25  } [get_ports {CAM0_X0_P}]
 set_property -dict {PACKAGE_PIN F19   IOSTANDARD LVCMOS25  } [get_ports {CAM0_X1_N}]
@@ -76,7 +76,7 @@ set_property -dict {PACKAGE_PIN D22   IOSTANDARD LVCMOS25  } [get_ports {CAM0_SE
 set_property -dict {PACKAGE_PIN E16   IOSTANDARD LVCMOS25  } [get_ports {CAM0_SERTFG_N}]
 set_property -dict {PACKAGE_PIN F16   IOSTANDARD LVCMOS25  } [get_ports {CAM0_SERTFG_P}]
 
-# CAM_1
+# Mini Camera Link Interface 1
 set_property -dict {PACKAGE_PIN A17   IOSTANDARD LVCMOS25  } [get_ports {CAM1_XY0_N}]
 set_property -dict {PACKAGE_PIN A16   IOSTANDARD LVCMOS25  } [get_ports {CAM1_XY0_P}]
 set_property -dict {PACKAGE_PIN G16   IOSTANDARD LVCMOS25  } [get_ports {CAM1_XY1_N}]
@@ -106,23 +106,23 @@ set_property -dict {PACKAGE_PIN AA22  IOSTANDARD LVCMOS25  } [get_ports {DDR3_VS
 # HDMI
 set_property -dict {PACKAGE_PIN J22   IOSTANDARD LVCMOS25  } [get_ports {HDMI_CEC}]
 set_property -dict {PACKAGE_PIN J21   IOSTANDARD LVCMOS25  } [get_ports {HDMI_HPD}]
-set_property -dict {PACKAGE_PIN L22   IOSTANDARD LVCMOS25  } [get_ports {HDMI_D0_N}]
-set_property -dict {PACKAGE_PIN L21   IOSTANDARD LVCMOS25  } [get_ports {HDMI_D0_P}]
-set_property -dict {PACKAGE_PIN M22   IOSTANDARD LVCMOS25  } [get_ports {HDMI_D1_N}]
-set_property -dict {PACKAGE_PIN M21   IOSTANDARD LVCMOS25  } [get_ports {HDMI_D1_P}]
-set_property -dict {PACKAGE_PIN R21   IOSTANDARD LVCMOS25  } [get_ports {HDMI_D2_N}]
-set_property -dict {PACKAGE_PIN R20   IOSTANDARD LVCMOS25  } [get_ports {HDMI_D2_P}]
-set_property -dict {PACKAGE_PIN N20   IOSTANDARD LVCMOS25  } [get_ports {HDMI_CLK_N}]
-set_property -dict {PACKAGE_PIN N19   IOSTANDARD LVCMOS25  } [get_ports {HDMI_CLK_P}]
+set_property -dict {PACKAGE_PIN L22   IOSTANDARD LVDS_25   } [get_ports {HDMI_D0_N}]
+set_property -dict {PACKAGE_PIN L21   IOSTANDARD LVDS_25   } [get_ports {HDMI_D0_P}]
+set_property -dict {PACKAGE_PIN M22   IOSTANDARD LVDS_25   } [get_ports {HDMI_D1_N}]
+set_property -dict {PACKAGE_PIN M21   IOSTANDARD LVDS_25   } [get_ports {HDMI_D1_P}]
+set_property -dict {PACKAGE_PIN R21   IOSTANDARD LVDS_25   } [get_ports {HDMI_D2_N}]
+set_property -dict {PACKAGE_PIN R20   IOSTANDARD LVDS_25   } [get_ports {HDMI_D2_P}]
+set_property -dict {PACKAGE_PIN N20   IOSTANDARD LVDS_25   } [get_ports {HDMI_CLK_N}]
+set_property -dict {PACKAGE_PIN N19   IOSTANDARD LVDS_25   } [get_ports {HDMI_CLK_P}]
 
-# I2C_PL
+# I2C PL
 set_property -dict {PACKAGE_PIN H17   IOSTANDARD LVCMOS25  } [get_ports {I2C_INT_N}]
 set_property -dict {PACKAGE_PIN AB21  IOSTANDARD LVCMOS25  PULLUP TRUE} [get_ports {Rev4}]
 set_property -dict {PACKAGE_PIN Y21   IOSTANDARD LVCMOS25  PULLUP TRUE} [get_ports {Rev5}]
 set_property -dict {PACKAGE_PIN R15   IOSTANDARD LVCMOS25  } [get_ports {I2C_SCL}]
 set_property -dict {PACKAGE_PIN H15   IOSTANDARD LVCMOS25  } [get_ports {I2C_SDA}]
 
-# IO_B
+# IO Connector B
 set_property -dict {PACKAGE_PIN P17   IOSTANDARD LVCMOS25  } [get_ports {IOB_D0_P}]
 set_property -dict {PACKAGE_PIN P18   IOSTANDARD LVCMOS25  } [get_ports {IOB_D1_N}]
 set_property -dict {PACKAGE_PIN T16   IOSTANDARD LVCMOS25  } [get_ports {IOB_D2_P}]
@@ -132,17 +132,17 @@ set_property -dict {PACKAGE_PIN R16   IOSTANDARD LVCMOS25  } [get_ports {IOB_D5_
 set_property -dict {PACKAGE_PIN R18   IOSTANDARD LVCMOS25  } [get_ports {IOB_D6_P}]
 set_property -dict {PACKAGE_PIN T18   IOSTANDARD LVCMOS25  } [get_ports {IOB_D7_N}]
 
-# IO_C
-set_property -dict {PACKAGE_PIN A21   IOSTANDARD LVCMOS25  } [get_ports {IOC_D0_P}]
-set_property -dict {PACKAGE_PIN A22   IOSTANDARD LVCMOS25  } [get_ports {IOC_D1_N}]
-set_property -dict {PACKAGE_PIN F18   IOSTANDARD LVCMOS25  } [get_ports {IOC_D2_P}]
-set_property -dict {PACKAGE_PIN E18   IOSTANDARD LVCMOS25  } [get_ports {IOC_D3_N}]
-set_property -dict {PACKAGE_PIN C15   IOSTANDARD LVCMOS25  } [get_ports {IOC_D4_P}]
-set_property -dict {PACKAGE_PIN B15   IOSTANDARD LVCMOS25  } [get_ports {IOC_D5_N}]
-set_property -dict {PACKAGE_PIN B16   IOSTANDARD LVCMOS25  } [get_ports {IOC_D6_P}]
-set_property -dict {PACKAGE_PIN B17   IOSTANDARD LVCMOS25  } [get_ports {IOC_D7_N}]
+# IO Connector C
+set_property -dict {PACKAGE_PIN A21   IOSTANDARD LVCMOS25  } [get_ports {IOC_D0_SC0_BTN0_N}]
+set_property -dict {PACKAGE_PIN A22   IOSTANDARD LVCMOS25  } [get_ports {IOC_D1_SC1_BTN1_N}]
+set_property -dict {PACKAGE_PIN F18   IOSTANDARD LVCMOS25  } [get_ports {IOC_D2_SC2}]
+set_property -dict {PACKAGE_PIN E18   IOSTANDARD LVCMOS25  } [get_ports {IOC_D3_SC3}]
+set_property -dict {PACKAGE_PIN C15   IOSTANDARD LVCMOS25  } [get_ports {IOC_D4_SC4}]
+set_property -dict {PACKAGE_PIN B15   IOSTANDARD LVCMOS25  } [get_ports {IOC_D5_SC5}]
+set_property -dict {PACKAGE_PIN B16   IOSTANDARD LVCMOS25  } [get_ports {IOC_D6_SC6}]
+set_property -dict {PACKAGE_PIN B17   IOSTANDARD LVCMOS25  } [get_ports {IOC_D7_SC7}]
 
-# IO_D
+# IO Connector D
 set_property -dict {PACKAGE_PIN L18   IOSTANDARD LVCMOS25  } [get_ports {IOD_D0_P}]
 set_property -dict {PACKAGE_PIN L19   IOSTANDARD LVCMOS25  } [get_ports {IOD_D1_N}]
 set_property -dict {PACKAGE_PIN K19   IOSTANDARD LVCMOS25  } [get_ports {IOD_D2_P}]
@@ -154,7 +154,7 @@ set_property -dict {PACKAGE_PIN AA14  IOSTANDARD LVCMOS25  } [get_ports {LED1_N}
 set_property -dict {PACKAGE_PIN AA13  IOSTANDARD LVCMOS25  } [get_ports {LED2_N}]
 set_property -dict {PACKAGE_PIN AB15  IOSTANDARD LVCMOS25  } [get_ports {LED3_N}]
 
-# PL_Gig_Ethernet
+# PL Gig Ethernet
 set_property -dict {PACKAGE_PIN U12   IOSTANDARD LVCMOS25  } [get_ports {ETH_LED2_N}]
 set_property -dict {PACKAGE_PIN AA12  IOSTANDARD LVCMOS25  } [get_ports {ETH_MDC}]
 set_property -dict {PACKAGE_PIN U10   IOSTANDARD LVCMOS25  } [get_ports {ETH_RXD[0]}]
